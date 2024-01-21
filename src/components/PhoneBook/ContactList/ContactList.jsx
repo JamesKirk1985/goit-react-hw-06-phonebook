@@ -13,8 +13,7 @@ export const ContactList = () => {
    
     let filterContact = contacts;
 
-    function filterFunction(Key) {    
-       console.log(contacts)
+    function filterFunction(Key) {       
        filterContact = contacts.filter((item) => (
        item.name.toLowerCase().includes(Key.toLowerCase())))    
     }
