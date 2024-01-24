@@ -11,7 +11,6 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import logger from 'react-logger';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
