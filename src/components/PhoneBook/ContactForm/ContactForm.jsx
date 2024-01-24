@@ -7,26 +7,7 @@ import { useEffect } from 'react';
 
 export const ContactForm = () => {  
   const dispatch = useDispatch()  
-  const contacts = useSelector(state => state.contacts)
-
-
-  useEffect(() => {
-    
-    const storageData = localStorage.getItem('contacts')
-    if (storageData) 
-    {
-      const array = JSON.parse(storageData);
-      array.forEach(element => {
-        if (contacts.some((item) => item.name === element.name)) { return }
-        dispatch(addContact(element))        
-      });      
-    }     
-  }, [])
-  
-  useEffect(() => {         
-  localStorage.setItem("contacts", JSON.stringify(contacts))    
-  },[contacts])
-
+  const contacts = useSelector(state => state.contacts.contacts)
   
   function handelSubmit (e)  {
     e.preventDefault()    

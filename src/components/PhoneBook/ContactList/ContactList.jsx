@@ -8,12 +8,13 @@ export const ContactList = () => {
     
     const dispatch = useDispatch()
 
-    const contacts = useSelector(state => state.contacts)
+    const contacts = useSelector(state => state.contacts.contacts)
     const filter = useSelector(state => state.filter)
+     
    
     let filterContact = contacts;
 
-    function filterFunction(Key) {       
+    function filterFunction(Key) {        
        filterContact = contacts.filter((item) => (
        item.name.toLowerCase().includes(Key.toLowerCase())))    
     }
